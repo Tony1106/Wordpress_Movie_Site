@@ -1,0 +1,29 @@
+.btn-default {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  outline: none;
+  padding: 0 15px;
+  position: relative;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 0;
+  text-transform: uppercase;
+  i {
+    line-height: 35px;
+    font-size: 10px;
+    padding-left: 3px;
+  }
+}
+
+.btn-primary {
+  background-color: #9352b3;
+}
+.btn-default:hover {
+  filter: brightness(143%);
+  color: #fff;
+}

@@ -1,0 +1,30 @@
+.site-header {
+  height: 64px;
+  width: 100%;
+  background: #fff;
+  @include justify-content-row;
+  justify-content: space-between;
+  .main-navigation {
+    .menu-top-menu-container {
+      width: 100%;
+      ul {
+        @include justify-content-row;
+        li {
+          list-style: none;
+          padding: 0 10px;
+          a {
+            padding: 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .search-login {
+    @include justify-content-row;
+    .search {
+      margin-right: 20px;
+    }
+    .login {
+    }
+  }
+}
