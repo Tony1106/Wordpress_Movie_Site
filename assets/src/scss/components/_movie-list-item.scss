@@ -1,0 +1,41 @@
+.list-moview-item {
+  background: white;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 10px 10px 40px 0 rgba(52, 58, 64, 0.1);
+  transition: all 0.3s ease;
+  @include justify-content-column;
+  align-items: flex-start;
+  .movie-image {
+    max-height: 350px;
+    overflow: hidden;
+  }
+  .movie-content {
+    padding: 30px;
+    .title {
+      padding: 0;
+      font-size: 1.9em;
+      font-weight: 500;
+    }
+    .star {
+      @include justify-content-row;
+      justify-content: space-between;
+      margin: 10px 0;
+      i {
+        color: #ffc741;
+      }
+      color: #9a5;
+    }
+    .short-description {
+      font-size: 16px;
+      line-height: 24px;
+      color: #948a99;
+    }
+  }
+  .movie-action {
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+}

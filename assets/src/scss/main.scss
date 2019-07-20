@@ -16,11 +16,11 @@
 @import "base/fonts", "base/base";
 
 // layout
-@import "layout/header", "layout/footer", "layout/forms", "layout/grid",
-  "layout/index";
+@import "layout/header", "layout/footer", "layout/forms", "layout/grid";
 
 // components
-@import "components/buttons", "components/modal";
+@import "components/buttons", "components/modal", "components/movie-list-item",
+  "components/pagination";
 
 // pages
 @import "pages/front-page", "pages/page";

@@ -1,4 +1,65 @@
+.content-area {
+  .site-main {
+    .banner-top {
+      background: linear-gradient(to bottom, #a11f3c 0%, #9352b3 100%);
+      background-image: url("../../img/movie-collection.jpg");
+      background-position: top;
+      height: 190px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 90%;
+      position: relative;
+      background-position: top;
+      min-width: 100%;
+      .container {
+        height: 100%;
+        @include justify-content-column;
+        align-items: self-start;
+        &::before {
+          @include overlay-gradient;
+        }
+        .text-wraper {
+          .inner {
+            position: relative;
+            color: white;
 
-.home {
-
+            .title {
+              color: #fff;
+              font-weight: 400;
+              margin: 0;
+              padding: 0;
+              text-transform: capitalize;
+            }
+            .breadcrumb {
+              background: transparent;
+              color: #fff;
+              padding: 0;
+              li {
+                a:after {
+                  content: " | ";
+                  margin: 0 5px;
+                }
+                a:hover {
+                  color: $primary;
+                }
+              }
+              span {
+                color: #b3bbce;
+              }
+            }
+          }
+        }
+      }
+    }
+    .list-movie {
+      background: $background-color;
+      .container {
+        @include justify-content-row;
+        flex-wrap: wrap;
+        & > * {
+          width: 30%;
+        }
+      }
+    }
+  }
 }

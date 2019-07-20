@@ -1,4 +1,4 @@
-.btn-default {
+.btn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -23,7 +23,7 @@
 .btn-primary {
   background-color: #9352b3;
 }
-.btn-default:hover {
+.btn:hover {
   filter: brightness(143%);
   color: #fff;
 }

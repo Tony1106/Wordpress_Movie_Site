@@ -30,7 +30,7 @@
 			<div class="search-login">
 				<div class="search"><i class="fas fa-search"></i></div>
 				<div class="login">
-					<a href="/user-login"><button class="btn-default btn-primary"><span class="icon"><i class="far fa-user"></i></span> Login</button></a>
+					<a href="/user-login"><button class="btn btn-primary"><span class="icon"><i class="far fa-user"></i></span> Login</button></a>
 				</div>
 			</div>
 		</header><!-- #masthead -->
