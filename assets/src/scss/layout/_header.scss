@@ -5,6 +5,9 @@
   padding: 0 20px;
   @include justify-content-row;
   justify-content: space-between;
+  .site-branding {
+    max-height: 40px;
+  }
   .main-navigation {
     .menu-top-menu-container {
       width: 100%;
@@ -24,8 +27,6 @@
     @include justify-content-row;
     .search {
       margin-right: 20px;
-    }
-    .login {
     }
   }
 }

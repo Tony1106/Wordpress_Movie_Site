@@ -41,7 +41,6 @@ get_header();
 		?>
 		<?php
 		get_template_part('./template-parts/movies');
-		get_template_part('./template-parts/pagination')
 		?>
 
 	</main><!-- #main -->
