@@ -8,9 +8,17 @@
   transition: all 0.3s ease;
   @include justify-content-column;
   align-items: flex-start;
+  &:hover {
+    transform: translateY(-10px);
+  }
   .movie-image {
     max-height: 350px;
+    width: 100%;
     overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
   .movie-content {
     padding: 30px;

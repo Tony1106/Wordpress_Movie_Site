@@ -53,11 +53,12 @@
     }
     .list-movie {
       background: $background-color;
+      padding: 30px 0;
       .container {
         @include justify-content-row;
         flex-wrap: wrap;
         & > * {
-          width: 30%;
+          max-width: 350px;
         }
       }
     }
