@@ -20,7 +20,7 @@
 
 // components
 @import "components/buttons", "components/modal", "components/movie-list-item",
-  "components/pagination";
+  "components/pagination", "components/contact_form";
 
 // pages
-@import "pages/front-page", "pages/page";
+@import "pages/front-page", "pages/page", "pages/single_movie";

@@ -3,7 +3,7 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
 		<div class="footer-item about">
-			<h4 class="title"><img src="./wp-content/themes/webpack-gulp-wordpress-starter-theme-master/assets/img/logo-white.png" alt=""></h4>
+			<h4 class="title"><img src="/wp-content/themes/webpack-gulp-wordpress-starter-theme-master/assets/img/logo-white.png" alt=""></h4>
 			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ducimus, atque. Praesentium suscipit provident explicabo dignissimos nostrum numquam deserunt earum accusantium et fugit.</p>
 		</div>
 		<div class="footer-item twitter-feed">

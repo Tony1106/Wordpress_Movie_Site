@@ -30,3 +30,19 @@
   margin-left: auto;
   max-width: map-get($map: $container-max-widths, $key: xl);
 }
+@mixin button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  outline: none;
+  padding: 0 15px;
+  position: relative;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 0;
+  text-transform: uppercase;
+}

@@ -24,7 +24,7 @@ $slicer-breakpoints-settings: true;
  */
 $font-size-base: 1.4rem;
 $font-weight-base: 300;
-$font-family-base: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: quicksand, sans-serif;
 $btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
   border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 $border-radius: 0.4rem;
@@ -39,7 +39,6 @@ $input-border-radius: 0;
 $grid-columns: 12;
 $grid-gutter-width: 30px;
 $body-color: black;
-
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,

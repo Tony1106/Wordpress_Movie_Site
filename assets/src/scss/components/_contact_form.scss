@@ -1,0 +1,26 @@
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+  width: 100%;
+  padding: 10px 20px;
+  color: #666;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+.wpcf7-form {
+  label {
+    width: 100%;
+  }
+}
+.wpcf7-submit {
+  background-color: #9352b3;
+  color: white;
+  @include button;
+}
