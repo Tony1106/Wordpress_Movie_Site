@@ -14,17 +14,13 @@
 		</div>
 		<div class="footer-item link">
 			<h4 class="title">Useful Links</h4>
-			<ul>
-				<li>
-					<a href="">About</a>
-				</li>
-				<li>
-					<a href="">Blog</a>
-				</li>
-				<li>
-					<a href="">Contact</a>
-				</li>
-			</ul>
+			<?php
+
+			$args = [
+				'title_li'     => __(''),
+			];
+			$list_page = wp_list_pages($args);
+			?>
 		</div>
 		<div class="footer-item instagram">
 			<h4 class="title">Instagram</h4>
