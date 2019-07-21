@@ -10,6 +10,11 @@ if (empty($data)) {
 <?php
 get_header();
 ?>
+
+<?php
+$session_id =  wp_get_session_token();
+echo $session_id;
+?>
 <section class="single-movie-container">
     <div class="page-header">
         <?php

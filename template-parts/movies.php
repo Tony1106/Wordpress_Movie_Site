@@ -22,7 +22,17 @@
                         <div class="title"><?php echo $movie['title']; ?></div>
                         <div class="star">
                             <div class="rating"><i class="fa fa-star"></i> <span><?php echo $movie['vote_average'] . '/10'; ?></span></div>
-                            <div class="category"></div>
+                            <div class="category">
+                                <?php
+                                $list_genres = $movie['genre_ids'];
+                                //Minimum 3 genres
+                                $list_genres = array_slice($list_genres, 0, 3);
+                                foreach ($list_genres as $genre) {
+                                    echo translate_genre($genre) . ',';
+                                }
+
+                                ?>
+                            </div>
                         </div>
                         <div class="short-description">
                             <?php echo substr($movie['overview'], 0, 124); ?>
