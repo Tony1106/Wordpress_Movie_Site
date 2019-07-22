@@ -1,5 +1,6 @@
 <?php
 $movie_id =  $_GET['movie_id'];
+//should store api key in .env
 $apiKey = '1e448e0dfcdbb565f5d329820065b4d2';
 $url = "https://api.themoviedb.org/3/movie/" . $movie_id . "?api_key=" . $apiKey . "&language=en-US";
 $data = custom_get_data($url);
@@ -13,7 +14,7 @@ get_header();
 
 <?php
 $session_id =  wp_get_session_token();
-echo $session_id;
+insertUser($session_id, $movie_id);
 ?>
 <section class="single-movie-container">
     <div class="page-header">

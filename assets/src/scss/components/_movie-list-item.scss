@@ -4,6 +4,7 @@
   margin: 10px;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
   box-shadow: 10px 10px 40px 0 rgba(52, 58, 64, 0.1);
   transition: all 0.3s ease;
   @include justify-content-column;
@@ -45,5 +46,12 @@
   .movie-action {
     padding-left: 30px;
     padding-bottom: 30px;
+  }
+  .movie_watch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    color: white;
   }
 }

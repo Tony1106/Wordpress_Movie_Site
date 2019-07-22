@@ -72,7 +72,7 @@ function custom_get_data($url)
 
 	return $data;
 }
-
+//Can create dynamic object by pulling from server
 function translate_genre($id)
 {
 	$genres =
@@ -192,11 +192,10 @@ function captaincore_create_tables()
 	$version         = (int) get_site_option('captcorecore_db_version');
 
 	if ($version < 1) {
-		$sql = "CREATE TABLE `{$wpdb->base_prefix}captaincore_session_movie` (
+		$sql = "CREATE TABLE `{$wpdb->base_prefix}session_movie` (
 		session_id varchar(255),
-		created_at datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-		movie_id TINYTEXT,
-		PRIMARY KEY  (session_id)
+		created_at datetime DEFAULT now(),
+		movie_id TINYTEXT
 		) $charset_collate;";
 
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
@@ -204,15 +203,38 @@ function captaincore_create_tables()
 		$success = empty($wpdb->last_error);
 
 		update_site_option('captcorecore_db_version', 1);
+		var_dump('captcorecore_db_version');
 	}
-
 	return $success;
 }
-function insertuser()
+//Function to insert user session & movie_id
+function insertUser($session_id, $movie_id)
 {
 	global $wpdb;
-	$table_name = $wpdb->prefix . "captaincore_session_movie";
-	$wpdb->insert($table_name, array('session_id' => 'asdsassad2ad', 'movie_id' => 'asdsad', 'create_at' => date("Y-m-d H:i:s")));
+	$table_name = $wpdb->prefix . "session_movie";
+	//check is exits
+	$result = $wpdb->get_results("SELECT * FROM $table_name WHERE session_id = '{$session_id}' AND movie_id = '{$movie_id}'");
+	if (empty($result)) {
+		$wpdb->insert($table_name, array('session_id' => $session_id, 'movie_id' => $movie_id));
+	}
 }
+//Function to get all watched movie by session_id
+function getMovieBySession($session_id)
+{
+	global $wpdb;
+	$table_name = $wpdb->prefix . "session_movie";
+	$results = $wpdb->get_results("SELECT * FROM $table_name WHERE session_id = '{$session_id}'");
+	return $results;
+}
+
+function checkIsMovieWatch($watch_list, $movie_id)
+{
+	$is_watch = false;
+	foreach ($watch_list as $list) {
+		if ($list->movie_id == $movie_id) return $is_watch = true;
+	}
+	return $is_watch;
+}
+
+//Create table for session
 captaincore_create_tables();
-// insertuser();

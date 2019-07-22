@@ -1,7 +1,7 @@
 <section class="list-movie">
     <div class="container">
         <?php
-        // $apiKey = getenv('API');
+        //should store api key in .env
         $apiKey = '1e448e0dfcdbb565f5d329820065b4d2';
         $pagination = [
             'current_page' => $page,
@@ -15,6 +15,10 @@
             $pagination['current_page'] = $data['page'];
             $pagination['total_pages'] = $data['total_pages'];
             $movies = $data['results'];
+
+            //Define watch list base on session ID
+            $session_id =  wp_get_session_token();
+            $watch_list = getMovieBySession($session_id);
             foreach ($movies as $movie) { ?>
                 <div class="list-moview-item">
                     <div class="movie-image"><img src=<?php echo "https://image.tmdb.org/t/p/w500/" . $movie['poster_path']; ?> alt=""></div>
@@ -39,6 +43,10 @@
                         </div>
                     </div>
                     <a class="movie-action" href=<?php echo "/movie/?movie_id=" . $movie['id'] ?>><button class="btn btn-primary">Details</button></a>
+                    <?php
+                    //Echo the watch icon when movie_id in session_movie database
+                    echo checkIsMovieWatch($watch_list, $movie['id']) ? '<div class="movie_watch"><span>Watched</span><i class="fas fa-eye"></i></div>' : '';
+                    ?>
                 </div>
             <?php
             }
