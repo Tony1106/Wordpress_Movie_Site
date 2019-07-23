@@ -11,9 +11,7 @@ A coding challenge from Arcadian Digital using Wordpress, PHP, SASS, GULP and Ja
 npm instal
 npm run start
 ```
-3. Login to Wordpress Admin page:
-`id: user`
-`password: password`
+3. Login to Wordpress Admin page.
 4. Active this theme in `Appearance/Themes`
 5. Change Permalink Common Settings to structure: `http://localhost:8888/` + `/%movie%/`
 6. Create new page name: `movie`
