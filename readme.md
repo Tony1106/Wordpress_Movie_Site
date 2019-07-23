@@ -9,11 +9,15 @@ A coding challenge from Arcadian Digital using Wordpress, PHP, SASS, GULP and Ja
 
 ```bash
 npm instal
+npm run start
 ```
 3. Login to Wordpress Admin page:
 `id: user`
 `password: password`
 4. Active this theme in `Appearance/Themes`
+5. Change Permalink Common Settings to structure: `http://localhost:8888/` + `/%movie%/`
+6. Create new page name: `movie`
+7. Add plugin `Contact Form 7`, `Font Awesome`
 
 ## Key Requirement & Solution:
 
@@ -29,8 +33,8 @@ npm instal
 - Every time user open a new session and view any movie, we will save the user session with the movie_id by `insertUser($session_id, $movie_id);`
 - In listing movie page, we will retrieve this data from the database and decide to show the watch symbol on the movie by `$watch_list = getMovieBySession($session_id);`
 
-## Testing:
-In this project I am not cover any testing.
+
+
 
 ## License
 Tony Bui - 0449 70 1106

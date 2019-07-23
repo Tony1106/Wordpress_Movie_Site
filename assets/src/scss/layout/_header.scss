@@ -9,18 +9,16 @@
   justify-content: space-between;
   .site-branding {
     max-height: 40px;
+    @include justify-content-row;
   }
   .main-navigation {
-    .menu-top-menu-container {
-      width: 100%;
-      ul {
-        @include justify-content-row;
-        li {
-          list-style: none;
-          padding: 0 10px;
-          a {
-            padding: 0 0.5rem;
-          }
+    #menu-main {
+      @include justify-content-row;
+      li {
+        list-style: none;
+        padding: 0 10px;
+        a {
+          padding: 0 0.5rem;
         }
       }
     }

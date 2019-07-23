@@ -7,7 +7,7 @@ $isSinglePage = $page_title == 'Movie Grid 3' ? false : true;
     <div class="site-branding">
         <?php
         if ($isSinglePage) {
-            echo "<a href='/'><img height=40 src='/wp-content/themes/webpack-gulp-wordpress-starter-theme-master/assets/img/logo-white.png'></a>";
+            echo "<a href='/'><img height=40 src='" . get_stylesheet_directory_uri() . "/assets/img/logo-white.png'></a>";
         } else {
             if (function_exists('the_custom_logo')) {
                 the_custom_logo();
