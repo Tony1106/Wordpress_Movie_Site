@@ -5,7 +5,7 @@ $current_page = $pagination['current_page'];
 <div class="pagination">
     <ul>
         <?php if ($current_page > 1) { ?>
-            <li class="page-numbers previous"><a href="/"><i class="fas fa-chevron-left"></i></a></li>
+            <li class="page-numbers previous"><a href=<?php echo "/page/" . ($current_page - 1) ?>><i class="fas fa-chevron-left"></i></a></li>
         <?php } ?>
         <?php
         for ($i = 1; $i < 6; $i++) {
@@ -20,6 +20,6 @@ $current_page = $pagination['current_page'];
             <?php }
         } ?>
 
-        <li class="page-numbers next"><a href="/page/3/"><i class="fas fa-chevron-right"></i></a></li>
+        <li class="page-numbers next"><a href=<?php echo "/page/" . ($current_page + 1) ?>><i class="fas fa-chevron-right"></i></a></li>
     </ul>
 </div><!-- #pagination -->

@@ -14,7 +14,10 @@ get_header();
 
 <?php
 $session_id =  wp_get_session_token();
-insertUser($session_id, $movie_id);
+if (!empty($session_id)) {
+    insertUser($session_id, $movie_id);
+}
+
 ?>
 <section class="single-movie-container">
     <div class="page-header">

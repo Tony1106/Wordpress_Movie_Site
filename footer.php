@@ -27,6 +27,21 @@
 			<p>follow us</p>
 		</div>
 	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			<div class="link">
+				<ul>
+					<li><a href="#">Privacy $ Cookies</a></li>
+					<li><a href="#">Term & conditions</a></li>
+					<li><a href="#">Legal Disclaimer</a></li>
+					<li><a href="#">Community</a></li>
+				</ul>
+			</div>
+			<div class="statement">
+				Copyright 2018.KlbTheme . All rights reserved
+			</div>
+		</div>
+	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

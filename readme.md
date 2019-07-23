@@ -1,30 +1,42 @@
-# WordPress Gulp and Webpack starter theme
+# Wordpress Martin's Movies
 
-## Under the hood
+A coding challenge from Arcadian Digital using Wordpress, PHP, SASS, GULP and Javascripts.
 
-- [ES6](https://github.com/lukehoban/es6features#readme) for JavaScript (transpiling with [Babel](https://babeljs.io/) and linting with [ESLint](https://eslint.org/))
-- [SASS](http://sass-lang.com/) preprocessor for CSS with [SASS Guidelines](https://sass-guidelin.es/#the-7-1-pattern)
-- [Breakpoint slicer](https://github.com/lolmaus/breakpoint-slicer/) to write faster media queries
-- [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) as CSS framework ([customizable with SASS](https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults))
-- [Gulp](https://gulpjs.com/) & [Webpack](https://webpack.js.org/) to manage, compile and optimize the theme's asset
+## Installation
 
-## Requirements
+1. Clone the project and save to `wp-content/themes`
+2. Install dependency:
 
-* Node
-* Gulp
+```bash
+npm instal
+```
+3. Login to Wordpress Admin page:
+`id: user`
+`password: password`
+4. Active this theme in `Appearance/Themes`
 
-## Usage
+## Key Requirement & Solution:
 
-First, clone this repository in your WordPress themes directory.
+1.  Build a new listing page to pull all data from their new database in their Wordpress site:
 
-Then, run the following commands in the theme's directory :
+- Use function `wp_remote_get($url);` to grab the data.
+- Use function `json_decode()` to decode json to php array
+- All that process live in the `custom_get_data($url)` in `functions.php`
 
-	npm install
+2. Mark a movie as 'watched' so when they open the listing page again in the same browser it will still be marked as 'watched':
 
-Launch your watch for assets with :
+- Without login to get user data, I try to use session ID by: `wp_get_session_token();`
+- Every time user open a new session and view any movie, we will save the user session with the movie_id by `insertUser($session_id, $movie_id);`
+- In listing movie page, we will retrieve this data from the database and decide to show the watch symbol on the movie by `$watch_list = getMovieBySession($session_id);`
 
-	npm run start
-	
-For production sites, create your build with :
+## Testing:
+In this project I am not cover any testing.
 
-	npm run build
+## License
+Tony Bui - 0449 70 1106
+
+- Stack: https://stackoverflow.com/users/9694174/tony-bui
+
+- Linkedin: https://www.linkedin.com/in/tienbui06/
+
+- Git: https://github.com/Tony1106
